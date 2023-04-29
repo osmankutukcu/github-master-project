@@ -1,0 +1,125 @@
+.header {
+  background-color: $header-bg;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+
+  &-links {
+    margin-right: 20px;
+
+    .icon-menu {
+      display: none;
+    }
+  }
+
+  &-logo {
+    svg {
+      @include img-hw-size(32px);
+      //font-size: 14px;
+      margin-right: 16px;
+      margin-left: 20px;
+      color: #fff;
+      &:hover {
+        color: #bebfc1;
+      }
+    }
+  }
+  &-search {
+    //position: relative;
+
+    display: flex;
+    align-items: center;
+    border: 1px solid $border-color;
+    background-color: $header-bg; //rgba(255, 255, 255, 0.125); //hsla(0, 0%, 100%, 0.125);
+    border-radius: 5px;
+    height: 30px;
+    width: 250px;
+    border: 1px solid #57606a;
+    &:active {
+      //border: 1px solid #fff;
+      outline: 1px solid #fff;
+      border: 1px solid #00a4ff;
+      //background-color: #fff;
+    }
+    &:focus-within {
+      width: 270px;
+      background-color: #fff;
+      transition: all 0.3s ease;
+    }
+    &:focus {
+      outline: 1px solid #fff;
+      border: 1px solid 2px solid #00a4ff;
+    }
+    input {
+      background-color: transparent;
+      width: 300px;
+      height: 25px;
+      padding: 7px;
+      font-size: 12px;
+      color: #fff;
+      border: none;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      margin-right: 16px;
+      border-radius: 3px;
+      &::placeholder {
+        color: #c8c9cb;
+        font-size: 14px;
+        font-weight: 400;
+        font-family: $my-font;
+      }
+
+      &:active {
+        border: none;
+        outline: none;
+      }
+      &:focus {
+        border: none;
+        outline: none;
+      }
+    }
+    svg {
+      //position: absolute;
+
+      color: #57606a;
+      margin: 8px 4px 8px 0px;
+      padding: 5px;
+      border: 1px solid #57606a;
+      border-radius: 4px;
+      @include img-hw-size(25px);
+    }
+  }
+
+  &-navbar {
+    ul {
+      display: flex;
+      li {
+        a {
+          text-decoration: none;
+          color: white; //#BEBFC1
+          margin-right: 16px;
+          margin-left: 10px;
+          font-family: $my-font;
+          font-size: 14px;
+          font-weight: 600;
+          &:hover {
+            color: #bebfc1;
+          }
+        }
+      }
+    }
+  }
+
+  &-links {
+    margin-left: auto;
+
+    svg {
+      color: #fff; // #ccc;
+      font-size: 14px;
+      margin-left: 16px;
+      &:hover {
+        color: #bebfc1;
+      }
+    }
+  }
+}
